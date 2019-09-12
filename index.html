@@ -364,7 +364,20 @@ height:50vh;
                 <span>欧拉工程第二道</span>
         </a>
         <div class="abstract-content">
-            <p><font size="4">求一个数的阶乘的尾部连续0的个数</font></p>
+            &lt;font size=4&gt;求一个数的阶乘的尾部连续0的个数&lt;/font&gt;
+&lt;!--more--&gt;
+
+&lt;font size=4&gt;这里主要是有个技巧，并不是简单的数0的个数那么简单粗暴，考虑0与5的倍数有关，则可以考虑通过对5进行取商，再进行递归求解。&lt;/font&gt;
+
+int zeroNumber(int m){
+   if (m &lt; 5){
+       return 0;
+   }else {
+       return m/5 + zeroNumber(m/5);
+   }
+}
+
+public static void m...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -393,7 +406,20 @@ height:50vh;
                 <span>欧拉工程第一道</span>
         </a>
         <div class="abstract-content">
-            <p><font size="4">如果我们列出10以下的所有自然数是3或5的倍数，我们得到3,5,6和9.这些倍数的总和是23。</font></p>
+            &lt;font size=4&gt;如果我们列出10以下的所有自然数是3或5的倍数，我们得到3,5,6和9.这些倍数的总和是23。&lt;/font&gt;
+&lt;!--more--&gt;
+
+求出1000以下3或5的所有倍数的总和。
+
+/**
+ * 1000以下的3或5的倍数的自然数之和
+ * @param args
+ */
+public static void main(String[] args){
+    int sum=0;
+    for (int i=1; i&lt;1000; i++){
+        if (i%3==0 || i%5==0){
+         ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -423,12 +449,13 @@ height:50vh;
         </a>
         <div class="abstract-content">
             Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
+Quick Start
+Create a new post
+1$ hexo new "My New Post"
 More info: Writing
-Run server1$ hexo server
-
-Mo...
+Run server
+1$ hexo server
+M...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -684,20 +711,6 @@ Mo...
     
     
     
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/hello-world/" >Hello World</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
@@ -709,6 +722,20 @@ Mo...
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2019/09/11/我的第一篇文章/" >欧拉工程第一道</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/hello-world/" >Hello World</a>
         </li>
     
     </div>
