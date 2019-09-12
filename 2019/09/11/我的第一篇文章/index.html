@@ -266,7 +266,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">115</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">126</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -395,9 +395,9 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p><font size="4">如果我们列出10以下的所有自然数是3或5的倍数，<a id="more"></a>我们得到3,5,6和9.这些倍数的总和是23。</font></p>
+        <p>&lt;font size=4&gt;如果我们列出10以下的所有自然数是3或5的倍数，&lt;!--more--&gt;我们得到3,5,6和9.这些倍数的总和是23。</p>
 <blockquote>
-<p>求出1000以下3或5的所有倍数的总和。</p>
+<p>求出1000以下3或5的所有倍数的总和。&lt;/font&gt;</p>
 </blockquote>
 <pre><code>/**
  * 1000以下的3或5的倍数的自然数之和
@@ -411,13 +411,20 @@ public static void main(String[] args){
         }
     }
     System.out.println(&quot;1000以下的3或5的倍数的自然数之和为：&quot; + sum);
-}</code></pre>
+}
+</code></pre>
+
     </article>
     <!-- license  -->
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2019/09/12/欧拉工程第二道/" title= "欧拉工程第二道">
+                    <div class="nextTitle">欧拉工程第二道</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -589,9 +596,18 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -604,6 +620,11 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/12</span><a class="archive-post-title" href= "/2019/09/12/欧拉工程第二道/" >欧拉工程第二道</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -628,6 +649,8 @@ top:50vh;
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="算法刷题"><span class="iconfont-archer">&#xe606;</span>算法刷题</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>

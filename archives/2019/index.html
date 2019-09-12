@@ -346,12 +346,66 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2019/09/12/欧拉工程第二道/" >
+            
+                <span>欧拉工程第二道</span>
+        </a>
+        <div class="abstract-content">
+            ###求一个数的阶乘的尾部连续0的个数
+int zeroNumber(int m){
+   if (m &lt; 5){
+       return 0;
+   }else {
+       return m/5 + zeroNumber(m/5);
+   }
+}
+
+public static void main(String[] args){
+    System.out.println(&quot;请输入一个数：&quot;);
+    Scanner scanner = new Scanner(System.in);
+    int m = scanner.nextInt();
+ ...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/12</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "算法刷题">算法刷题</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2019/09/11/我的第一篇文章/" >
             
                 <span>欧拉工程第一道</span>
         </a>
         <div class="abstract-content">
-            <p><font size="4">如果我们列出10以下的所有自然数是3或5的倍数，
+            &lt;font size=4&gt;如果我们列出10以下的所有自然数是3或5的倍数，&lt;!--more--&gt;我们得到3,5,6和9.这些倍数的总和是23。
+
+求出1000以下3或5的所有倍数的总和。&lt;/font&gt;
+
+/**
+ * 1000以下的3或5的倍数的自然数之和
+ * @param args
+ */
+public static void main(String[] args){
+    int sum=0;
+    for (int i=1; i&lt;1000; i++){
+        if (i%3==0 || i%5==0){
+          ...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -375,12 +429,13 @@
         </a>
         <div class="abstract-content">
             Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-
+Quick Start
+Create a new post
+1$ hexo new "My New Post"
 More info: Writing
-Run server1$ hexo server
-
-Mo...
+Run server
+1$ hexo server
+M...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -507,9 +562,18 @@ Mo...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -522,6 +586,11 @@ Mo...
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/12</span><a class="archive-post-title" href= "/2019/09/12/欧拉工程第二道/" >欧拉工程第二道</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -546,6 +615,8 @@ Mo...
   </div>
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name" data-tags="算法刷题"><span class="iconfont-archer">&#xe606;</span>算法刷题</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
