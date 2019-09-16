@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">460</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">462</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -402,19 +402,17 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <p><font size="4">本文内容主要是为了解决跨被试数据差异而提出的迁移学习。</font></p>
-<h1 id="1、迁移学习的重要性"><a href="#1、迁移学习的重要性" class="headerlink" title="1、迁移学习的重要性"></a>1、迁移学习的重要性</h1><p><font size="4">传统的机器学习/数据挖掘只有在训练集数据和测试集数据都来自一个feature space（特征空间）和统一分布的时候才运行比较好，这意味着每一次换了数据都要重新训练模型，太麻烦。比如：</font></p>
+<h2 id="1、迁移学习的重要性"><a href="#1、迁移学习的重要性" class="headerlink" title="1、迁移学习的重要性"></a>1、迁移学习的重要性</h2><p><font size="4">传统的机器学习/数据挖掘只有在训练集数据和测试集数据都来自一个feature space（特征空间）和统一分布的时候才运行比较好，这意味着每一次换了数据都要重新训练模型，太麻烦。比如：</font></p>
 <p>  (1)从数据类型/内容上来看，对于新的数据集，获取新的训练数据很贵也很难。</p>
 <p>  (2)从时间维度上看，有些数据集容易过期，即不同时期的数据分布也会不同，比如对于某个用户进行室内wifi定位的时候，把他在一个很大的室内的数据标记好了之后已经很难了，wifi信号强弱还会受到时间影响，所以如果对于每个时间段都要进行一次训练那就太麻烦了。</p>
-<h1 id="2、概念"><a href="#2、概念" class="headerlink" title="2、概念"></a>2、概念</h1><p><font size="4">记住两对概念就好了：domain（域）和task（任务），source（源）和target（目标），然后给它们进行自由组合.</font></p>
+<h2 id="2、概念"><a href="#2、概念" class="headerlink" title="2、概念"></a>2、概念</h2><p><font size="4">记住两对概念就好了：domain（域）和task（任务），source（源）和target（目标），然后给它们进行自由组合.</font></p>
 <p>domain包括两部分：</p>
-<p>1.feature space（特征空间）；</p>
-<p>2.probability（概率）。</p>
+<p>  1.feature space（特征空间）；</p>
+<p>  2.probability（概率）。</p>
 <p>所以当我们说domain不同的时候，就得分两种情况。可能是feature space不同，也可能是feature space一样但probability不同。</p>
 <p>task包括两部分：</p>
-<ol>
-<li>label space（标记空间）；</li>
-<li>objective predictive function（目标预测函数）。</li>
-</ol>
+<p>  1.label space（标记空间）；</p>
+<p>  2.objective predictive function（目标预测函数）。</p>
 <p>同理，当我们说task不同的时候，就得分两种情况。可能是label space不同，也可能是label space一样但function不同。</p>
 <p>source和target就不用说了，前者是用于训练模型的域/任务，后者是要用前者的模型对自己的数据进行预测/分类/聚类等机器学习任务的域/任务。<br></p>
 <h2 id="3、迁移学习分类"><a href="#3、迁移学习分类" class="headerlink" title="3、迁移学习分类"></a>3、迁移学习分类</h2>
@@ -425,7 +423,7 @@ height:50vh;
             <p>原文作者：<a href="https://LKX5.github.io">Kechelle</a>
             <p>原文链接：<a href="https://LKX5.github.io/2019/09/16/迁移学习/">https://LKX5.github.io/2019/09/16/迁移学习/</a>
             <p>发表日期：<a href="https://LKX5.github.io/2019/09/16/迁移学习/">September 16th 2019, 9:56:48 am</a>
-            <p>更新日期：<a href="https://LKX5.github.io/2019/09/16/迁移学习/">September 16th 2019, 4:13:40 pm</a>
+            <p>更新日期：<a href="https://LKX5.github.io/2019/09/16/迁移学习/">September 16th 2019, 4:21:16 pm</a>
             <p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -588,7 +586,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1、迁移学习的重要性"><span class="toc-number">1.</span> <span class="toc-text">1、迁移学习的重要性</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2、概念"><span class="toc-number">2.</span> <span class="toc-text">2、概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3、迁移学习分类"><span class="toc-number">2.1.</span> <span class="toc-text">3、迁移学习分类</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、迁移学习的重要性"><span class="toc-number">1.</span> <span class="toc-text">1、迁移学习的重要性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、概念"><span class="toc-number">2.</span> <span class="toc-text">2、概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、迁移学习分类"><span class="toc-number">3.</span> <span class="toc-text">3、迁移学习分类</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -702,6 +700,11 @@ top:50vh;
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2019/09/11/我的第一篇文章/" >欧拉工程第一道</a>
+        </li>
+    
+    
     
     
     
@@ -713,20 +716,6 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2019/09/10/hello-world/" >Hello World</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2019 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/11</span><a class="archive-post-title" href= "/2019/09/11/我的第一篇文章/" >欧拉工程第一道</a>
         </li>
     
     </div>
