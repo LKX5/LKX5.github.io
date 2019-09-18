@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.4k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.5k</span>阅读时长: <span class="post-count reading-time">5 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -401,72 +401,79 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p><font size="4">本文内容主要是为了解决跨被试数据差异而提出的迁移学习。</font></p>
-<h2 id="迁移学习的重要性"><a href="#迁移学习的重要性" class="headerlink" title="迁移学习的重要性"></a>迁移学习的重要性</h2><font size="4">
-
+        <p>&lt;font size=4&gt;本文内容主要是为了解决跨被试数据差异而提出的迁移学习。&lt;/font&gt;</p>
+<h2>迁移学习的重要性</h2>
+<p>&lt;font size=4&gt;</p>
 <p>传统的机器学习/数据挖掘只有在训练集数据和测试集数据都来自一个feature space（特征空间）和统一分布的时候才运行比较好，这意味着每一次换了数据都要重新训练模型，太麻烦。比如：</p>
 <p>（1）从数据类型/内容上来看，对于新的数据集，获取新的训练数据很贵也很难。</p>
-<p>（2）从时间维度上看，有些数据集容易过期，即不同时期的数据分布也会不同，比如对于某个用户进行室内wifi定位的时候，把他在一个很大的室内的数据标记好了之后已经很难了，wifi信号强弱还会受到时间影响，所以如果对于每个时间段都要进行一次训练那就太麻烦了。</p></font><p></p>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><font size="4">
-
+<p>（2）从时间维度上看，有些数据集容易过期，即不同时期的数据分布也会不同，比如对于某个用户进行室内wifi定位的时候，把他在一个很大的室内的数据标记好了之后已经很难了，wifi信号强弱还会受到时间影响，所以如果对于每个时间段都要进行一次训练那就太麻烦了。&lt;/font&gt;</p>
+<h2>概念</h2>
+<p>&lt;font size=4&gt;</p>
 <p>记住两对概念就好了：domain（域）和task（任务），source（源）和target（目标），然后给它们进行自由组合.</p>
 <p>domain包括两部分：</p>
 <ul>
-<li><p>feature space（特征空间）；</p>
+<li>
+<p>feature space（特征空间）；</p>
 </li>
-<li><p>probability（概率）。</p>
+<li>
+<p>probability（概率）。</p>
 </li>
 </ul>
 <p>所以当我们说domain不同的时候，就得分两种情况。可能是feature space不同，也可能是feature space一样但probability不同。</p>
 <p>task包括两部分：</p>
 <ul>
-<li><p>label space（标记空间）；</p>
+<li>
+<p>label space（标记空间）；</p>
 </li>
-<li><p>objective predictive function（目标预测函数）。</p>
+<li>
+<p>objective predictive function（目标预测函数）。</p>
 </li>
 </ul>
 <p>同理，当我们说task不同的时候，就得分两种情况。可能是label space不同，也可能是label space一样但function不同。</p>
-<p>source和target就不用说了，前者是用于训练模型的域/任务，后者是要用前者的模型对自己的数据进行预测/分类/聚类等机器学习任务的域/任务。<br></p></font><p></p>
-<h2 id="迁移学习分类"><a href="#迁移学习分类" class="headerlink" title="迁移学习分类"></a>迁移学习分类</h2><h3 id="迁移的角度"><a href="#迁移的角度" class="headerlink" title="迁移的角度"></a>迁移的角度</h3><font size="4">
-
+<p>source和target就不用说了，前者是用于训练模型的域/任务，后者是要用前者的模型对自己的数据进行预测/分类/聚类等机器学习任务的域/任务。
+&lt;/font&gt;</p>
+<h2>迁移学习分类</h2>
+<h3>迁移的角度</h3>
+<p>&lt;font size=4&gt;</p>
 <p><strong>(1)迁移什么</strong></p>
-<p>  哪一部分知识可以被迁移</p>
+<p>哪一部分知识可以被迁移</p>
 <p><strong>(2)怎么迁移</strong></p>
-<p>  当然是要训练出合适的模型了。</p>
+<p>当然是要训练出合适的模型了。</p>
 <p><strong>(3)什么时候用到迁移学习</strong></p>
-<p>  当source domain和target domain关系不大或者太不相同的时候，迁移效果可能就不太那么好了，甚至比不迁移的时候效果要差，这个时候就出现native transfer了。</p>
+<p>当source domain和target domain关系不大或者太不相同的时候，迁移效果可能就不太那么好了，甚至比不迁移的时候效果要差，这个时候就出现native transfer了。</p>
 <blockquote>
 <p>可以看到，迁移学习的能力是有限的，我们需要去关注迁移学习的边界在哪里，比如评估conditional Kolmogorov complexity和tasks的关系。在上述三条中尤其关注的应该是第三条，因为你可能忙活了好久发现迁移了还不如不迁移，白费心思。比如，可以在迁移之前可以比较一下source和domain之间的transferability（可迁移性）。</p>
 </blockquote>
-</font>
-
-<h3 id="迁移的场景"><a href="#迁移的场景" class="headerlink" title="迁移的场景"></a>迁移的场景</h3><font size="4">
-
+<p>&lt;/font&gt;</p>
+<h3>迁移的场景</h3>
+<p>&lt;font size=4&gt;</p>
 <p>（1）source domain与target domain的feature space相同时为<strong>同构学习</strong>；</p>
-<p>（2）source domain与target domain的feature space不同时为<strong>异构学习</strong>；<br></p></font><p></p>
-<h3 id="迁移的方式"><a href="#迁移的方式" class="headerlink" title="迁移的方式"></a>迁移的方式</h3><font size="4">
-
+<p>（2）source domain与target domain的feature space不同时为<strong>异构学习</strong>；
+&lt;/font&gt;</p>
+<h3>迁移的方式</h3>
+<p>&lt;font size=4&gt;</p>
 <p><strong>（1）Inductive TL（归纳式迁移学习）</strong></p>
 <p>source和target的domain可能一样或不一样，task不一样；target domain的labeled数据可得，source domain不一定可得。所以呢，根据source domain的labeled数据可以再细分为两类：</p>
 <ul>
-<li><p>multitask learning（多任务学习）：source domain的labeled数据可得。</p>
+<li>
+<p>multitask learning（多任务学习）：source domain的labeled数据可得。</p>
 </li>
-<li><p>self-taught learning（自学习）：source domain的labeled数据不可得。</p>
+<li>
+<p>self-taught learning（自学习）：source domain的labeled数据不可得。</p>
 </li>
 </ul>
 <p><strong>（2）Transductive TL（直推式迁移学习）</strong></p>
 <p>source和target的task一样，domain不一样；source domain的labeled数据可得，target domain的不可得。注意我们提过，domain不一样意味着两种可能：feature space不一样，或者feature space一样而probability不一样。而后一种情况和domain adaptation（域适配）息息相关。这里也可以根据domain和task的个数分为两个情况：</p>
-<p>    Domain Adaptation（域适配）：不同的domains+single task</p>
-<p>    Sample Selection Bias（样本选择偏差）/Covariance Shift（协方差转变）：single domain+single task</p>
+<p>	Domain Adaptation（域适配）：不同的domains+single task</p>
+<p>	Sample Selection Bias（样本选择偏差）/Covariance Shift（协方差转变）：single domain+single task</p>
 <p><strong>（3）Unsupervised TL（无监督迁移学习）</strong></p>
 <p>source和target的domain和task都不一样；source domain和target domain的labeled数据都不可得。</p>
 <p>综上所述：这几个方法的差别在于：</p>
 <p>（1）source和target的domain和tasks是否一致；</p>
 <p>（2）source domain和target domain的labled数据是否可得。</p>
-</font>
-
-<h3 id="从“迁移什么”来看"><a href="#从“迁移什么”来看" class="headerlink" title="从“迁移什么”来看"></a>从“迁移什么”来看</h3><font size="4">
-
+<p>&lt;/font&gt;</p>
+<h3>从“迁移什么”来看</h3>
+<p>&lt;font size=4&gt;</p>
 <p><strong>（1）Instance-based TL（样本迁移）</strong></p>
 <p>尽管source domain数据不可以整个直接被用到target domain里，但是在source domain中还是找到一些可以重新被用到target domain中的数据。对它们调整权重，使它能与target domain中的数据匹配之后可以进行迁移。盗一张图，比如在这个例子中就是找到例子3，然后加重它的权值，这样在预测的时候它所占权重较大，预测也可以更准确。</p>
 <p><strong>instance reweighting</strong>（样本重新调整权重）和<strong>importance sampling</strong>（重要性采样）是instance-based TL里主要用到的两项技术。</p>
@@ -479,7 +486,8 @@ height:50vh;
 <p>假设source tasks和target tasks之间共享一些参数，或者共享模型hyperparameters（超参数）的先验分布。这样把原来的模型迁移到新的domain时，也可以达到不错的精度。</p>
 <p><strong>（4）Relational-knowledge-transfer（关系迁移）</strong></p>
 <p>把相似的关系进行迁移，比如生物病毒传播到计算机病毒传播的迁移，比如师生关系到上司下属关系的迁移。</p>
-</font>
+<p>&lt;/font&gt;</p>
+
     </article>
     <!-- license  -->
     
@@ -655,7 +663,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#迁移学习的重要性"><span class="toc-number">1.</span> <span class="toc-text">迁移学习的重要性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概念"><span class="toc-number">2.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#迁移学习分类"><span class="toc-number">3.</span> <span class="toc-text">迁移学习分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#迁移的角度"><span class="toc-number">3.1.</span> <span class="toc-text">迁移的角度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#迁移的场景"><span class="toc-number">3.2.</span> <span class="toc-text">迁移的场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#迁移的方式"><span class="toc-number">3.3.</span> <span class="toc-text">迁移的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从“迁移什么”来看"><span class="toc-number">3.4.</span> <span class="toc-text">从“迁移什么”来看</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">1.</span> <span class="toc-text">迁移学习的重要性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">2.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#null"><span class="toc-number">3.</span> <span class="toc-text">迁移学习分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">3.1.</span> <span class="toc-text">迁移的角度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">3.2.</span> <span class="toc-text">迁移的场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">3.3.</span> <span class="toc-text">迁移的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#null"><span class="toc-number">3.4.</span> <span class="toc-text">从“迁移什么”来看</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -668,12 +676,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
     
     
     
